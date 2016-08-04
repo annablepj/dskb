@@ -1,0 +1,46 @@
+<% if !flash[:notice].blank? %>
+  <div class="alert alert-info">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
+<br />
+<%= link_to "New Index Item", new_indexitem_path, class: "btn btn-primary" %>
+<br />
+<br />
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Attachment Name</th>
+      <th>Attachment URL</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>URL</th>
+      <th>Record Type</th>
+      <th>Solution Category</th>
+      <th>Publication Date</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @indexitems.each do |indexitem| %>
+      <tr>
+        <td><%= indexitem.name %></td>
+        <td><%= link_to "Download indexitem", indexitem.attachment_url %></td>
+        <td><%= indexitem.title %></td>
+        <td><%= indexitem.description %></td>
+        <td><%= indexitem.url %></td>
+        <td><%= indexitem.record_type %></td>
+        <td><%= indexitem.category %></td>
+        <td><%= indexitem.publication_date %></td>
+        <td><%= button_to "Delete",  indexitem, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{indexitem.name}?" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="well">
+ <form>
+   <input type=text>Test</input>
+   <input type=submit name="testcommit" class="btn btn-primary"> </input>
+ </form>  
+</div>

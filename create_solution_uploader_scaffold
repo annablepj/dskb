@@ -1,0 +1,7 @@
+#rails g model DSKBSolution filename:string title:string description:string record_type:string category:string format:string url:string authors:string publication_date:string tools_used:string concepts_used:string data_sources:string
+#rake db:migrate
+#rails g controller DSKBSolutions index new create destroy
+rails g model Indexitem name:string attachment:string title:string description:string record_type:string category:string format:string url:string authors:string publication_date:string tools_used:string concepts_used:string data_sources:string attachment_url:string
+rake db:migrate
+rails g controller Indexitems index new create destroy
+rails g uploader attachment

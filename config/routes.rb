@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  # Add routing for New Index Item upload pages
+  # PJA
+  Workspace::Application.routes.draw do
+    resources :indexitems, only: [:index, :new, :create, :destroy]
+  end
+  
   mount Blacklight::Engine => '/'
   root to: "catalog#index"
     concern :searchable, Blacklight::Routes::Searchable.new

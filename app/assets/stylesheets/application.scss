@@ -1,0 +1,4 @@
+// application.scss
+.navbar-brand { width:300px !important; }   /* PJA:  Override width of header image */
+@import "bootstrap-sprockets";
+@import 'blacklight';

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.6'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -48,6 +48,7 @@ end
 gem 'blacklight', "~> 6.0"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
+gem 'carrierwave'
 group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
   gem 'sqlite3'

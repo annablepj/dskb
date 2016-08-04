@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714145322) do
+ActiveRecord::Schema.define(version: 20160803014535) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id",       null: false
@@ -25,6 +25,42 @@ ActiveRecord::Schema.define(version: 20160714145322) do
 
   add_index "bookmarks", ["document_id"], name: "index_bookmarks_on_document_id"
   add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id"
+
+  create_table "dskb_solutions", force: :cascade do |t|
+    t.string   "filename"
+    t.string   "title"
+    t.string   "description"
+    t.string   "record_type"
+    t.string   "category"
+    t.string   "format"
+    t.string   "url"
+    t.string   "authors"
+    t.string   "publication_date"
+    t.string   "tools_used"
+    t.string   "concepts_used"
+    t.string   "data_sources"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "indexitems", force: :cascade do |t|
+    t.string   "name"
+    t.string   "attachment"
+    t.string   "title"
+    t.string   "description"
+    t.string   "record_type"
+    t.string   "category"
+    t.string   "format"
+    t.string   "url"
+    t.string   "authors"
+    t.string   "publication_date"
+    t.string   "tools_used"
+    t.string   "concepts_used"
+    t.string   "data_sources"
+    t.string   "attachment_url"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "searches", force: :cascade do |t|
     t.binary   "query_params"
