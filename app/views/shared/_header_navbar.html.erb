@@ -1,0 +1,32 @@
+<div class="navbar" style="background-color: #7d120c; min-height: 40px">
+  <div class="container">
+    <a class="navbar-brand" href="http://www.iu.edu/">
+    <%= image_tag("trident-tab.png", :alt => "", :style => "position: absolute; z-index: 500000; height: auto; top: 6px") %>
+    <font class="iubrand-text">Indiana University </font>
+    </a>
+ </div>
+</div>
+<div id="header-navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="<%= container_classes %>">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle btn collapsed" data-toggle="collapse" data-target="#user-util-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="user-util-collapse">
+     <a href="/"><font class="dskbbrand-text">DSKB</font></a>
+    <%= render :partial=>'/user_util_links' %>
+    </div>
+  </div>
+</div>
+
+<div id="search-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="<%= container_classes %>">
+    <%= render_search_bar  %>
+  </div>
+</div>
