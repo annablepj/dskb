@@ -1,22 +1,18 @@
 <div class="page-header row">
-  <h2 class="col-md-8 page-heading">Welcome to the Indiana DSKB!</h2>
+<%= image_tag("DSKBLogo50.png", :alt => "Indiana DSKB", :width => "600") %>
 </div>
 
-<div id="getting-started">
-  <h3 class='section-heading'>Here&rsquo;s how to get started:</h3>
-  
-  <ol>
-    <li>Enter any string or a "*" in the search box and click search.</li>
+<div id="welcome message">
+  <h2>Welcome!  To get started:</h2>
+  <div>
+  <ul>
+    <li>Enter any string to search, or just click the Search button to see everything.</li>
     <li>Use Record Type to filter between Solution Write-ups, Data Science Concepts and Tools</li>
     <li>Click on the title of any search entry to see full details</li>
-  </ol>
+  </ul>
+  </div>
 </div>
 
-<%# This is the same panel shown in the Rails welcome template %>
-<div id="about">
-  <h3 class='section-heading'><a href="/rails/info/properties">About your application&rsquo;s environment</a></h3>
-  <div id="about-content" class="well" style="display: none"></div>
-</div>
 
 <script>
   $(function() {
