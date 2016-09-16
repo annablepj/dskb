@@ -18,10 +18,14 @@
                 color: white; 
                 text-decoration: none;
                 position: absolute;
-                transform: translateY(1px);
+                transform: translateY(0px);
                 padding: 0px 0 0 75px;
 }
-
+.footer-text {
+                font-size: 0.8em;
+                padding-left: 80px;
+                padding-right: 80px;
+}
 
 @import "bootstrap-sprockets";
 @import 'blacklight';
