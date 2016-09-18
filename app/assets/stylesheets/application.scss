@@ -26,6 +26,14 @@
                 padding-left: 80px;
                 padding-right: 80px;
 }
+.well.dskb {
+    //background-image: url("body-bg-light.jpg");
+    padding: 5px 19px 10px 19px;
+    text-align: center;
+}
+.well.dskb.h1 {
+    color: #990000;
+}
 
 @import "bootstrap-sprockets";
 @import 'blacklight';
