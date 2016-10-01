@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
   
+  get 'static_pages/about'
+
+  get 'static_pages/contribute'
+
   # Add routing for New Index Item upload pages
   # PJA
   Workspace::Application.routes.draw do
+  get 'static_pages/about'
+
+  get 'static_pages/contribute'
+
     resources :indexitems, only: [:index, :new, :create, :destroy]
   end
   
