@@ -2,6 +2,9 @@
 .navbar-brand {  background: transparent !important;}   /* PJA:  Override width of header image */
 .navbar-inverse { background-image: url("body-bg.jpg") !important; }
 .navbar-nav a { color: #fff !important;}
+@media (max-width: 768px) {
+  .navbar-header { margin-left: 13px !important;}  /* PJA: add left margin to align DSKB properly when collapsed */
+  }
 .iubrand-text { font-family: BentonSansCondensedRegular, Arial Narrow, Arial, Helvetica, sans-serif; 
                 font-size: 1em;
                 letter-spacing: 0.025em;
@@ -18,8 +21,9 @@
                 text-align: left;
                 color: white; 
                 text-decoration: none;
-                position: absolute;
-                transform: translateY(0px);
+                position: static;
+                transform: translateY(3px);
+                transform: translateX(3px);
                 padding: 0px 0 0 75px;
 }
 .footer-text {
@@ -35,6 +39,7 @@
 .well.dskb.h1 {
     color: #990000;
 }
+
 
 @import "bootstrap-sprockets";
 @import 'blacklight';
